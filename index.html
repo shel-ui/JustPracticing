@@ -20,10 +20,8 @@
             overflow: auto;
             background-color: #EEEDEB;
             height: 500px;
-            width: 550px;
-            /*overflow: hidden;*/
             padding: 30px;
-            margin: 3px;
+            margin: 24.3px;
             border-radius: 20px;
             box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.205);
         }
@@ -41,7 +39,7 @@
             padding: 10px;
             margin: 5px;
             border: none;
-            width: 40px;
+            width: 35px;
             border-radius: 50px;
             color: white;
             font-weight: bold;
@@ -59,9 +57,10 @@
             background-color: white;
             border-radius: 25px;
             padding: 20px;
-            width: fit-content;
+            width: 100%;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            box-sizing: border-box;
         }
 
         @media only screen and (max-width: 700px) {
@@ -118,7 +117,7 @@
     </style>
         <div id="white-bg">
             <div id="Enter-part">
-                <input id="mainInput" type="text" placeholder="Enter a task..." maxlength="46"> 
+                <input id="mainInput" type="text" placeholder="Enter a task..." maxlength="1000"> 
                 <button id="addBtn">+</button>
             </div>
             <div id="tasks"></div>
@@ -145,6 +144,7 @@
             createNewTask.textContent = inp;
             tasksDiv.appendChild(paraG);
         }
+        
 
         inputField.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
