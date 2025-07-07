@@ -150,9 +150,10 @@
                     createNewTask.classList.toggle('completed');
                 });
 
-                 createNewTask.addEventListener('touchstart', function() {
+                 createNewTask.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
                     createNewTask.classList.toggle('completed');
-                }, {passive: true});
+                }, {passive: false});
             }
 
             createNewTask.textContent = inp;
