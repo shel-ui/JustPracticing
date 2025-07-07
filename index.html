@@ -62,7 +62,7 @@
             overflow-wrap: break-word;
             box-sizing: border-box;
         }
-        
+
         .completed {
             text-decoration: line-through; /* Strikethrough style */
             color: gray; /* Optional: change color for completed tasks */
@@ -149,6 +149,10 @@
                 createNewTask.addEventListener('click', function() {
                     createNewTask.classList.toggle('completed');
                 });
+
+                 createNewTask.addEventListener('touchstart', function() {
+                    createNewTask.classList.toggle('completed');
+                }, {passive: true});
             }
 
             createNewTask.textContent = inp;
